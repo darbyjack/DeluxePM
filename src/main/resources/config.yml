@@ -1,0 +1,13 @@
+plugin-prefix: "&b[&7DeluxePM&b]"
+
+messages:
+  toggle: "/deluxepm toggle"
+  enabled: "PMs have been turned on"
+  disabled: "PMs have been turned off"
+  user-disabled: "This user has PMs turned off"
+
+pm-commands:
+- "/tell"
+- "/whisper"
+- "/r"
+- "/msg"

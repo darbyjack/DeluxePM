@@ -1,0 +1,10 @@
+name: DeluxePM
+version: @version@
+main: me.glaremasters.deluxepm.DeluxePM
+authors: [blockslayer22]
+description: Toggle PMs!
+
+commands:
+  deluxepm:
+    description: Default help info
+
