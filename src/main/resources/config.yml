@@ -1,3 +1,12 @@
+# These are a list of commands that will also work the same
+# as /deluxepm (these all work, feel free to advertise which one you want players to use)
+# - dpm
+# - pmtoggle
+# - dmtoggle
+# - togglepms
+# - togglepm
+# - msgtoggle
+
 plugin-prefix: "&b[&7DeluxePM&b]"
 
 updater:
