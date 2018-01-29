@@ -16,11 +16,12 @@ public class CommandHelp extends CommandBase {
         super("help", "List all commands", "deluxepm.help", false, null, null, 0, 0);
     }
 
-    public void execute(CommandSender sender, String[] args) {
+    public void execute(Player player, String[] args) {
         FileConfiguration config = DeluxePM.getI().getConfig();
 
-        sender.sendMessage(ColorUtil.color(config.getString("messages.toggle")));
-        sender.sendMessage(ColorUtil.color(config.getString("messages.reload")));
+        player.sendMessage(ColorUtil.color(config.getString("messages.toggle")));
+        player.sendMessage(ColorUtil.color(config.getString("messages.reload")));
+        player.sendMessage(ColorUtil.color(config.getString("messages.help")));
     }
 
 }

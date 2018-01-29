@@ -20,6 +20,9 @@ public class CommandToggle extends CommandBase {
     }
 
     public void execute(CommandSender sender, String[] args) {
+        if (args.length > 1) {
+            return;
+        }
         FileConfiguration config = DeluxePM.getI().getConfig();
         if (togglePM.contains(sender.getName())) {
             togglePM.remove(sender.getName());
