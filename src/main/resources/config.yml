@@ -9,6 +9,7 @@ messages:
   enabled: "PMs have been turned on"
   disabled: "PMs have been turned off"
   user-disabled: "This user has PMs turned off"
+  reload-success: "Config has been successfully reloaded"
 
 pm-commands:
 - "/tell"
