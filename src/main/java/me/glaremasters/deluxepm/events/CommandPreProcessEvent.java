@@ -24,6 +24,9 @@ public class CommandPreProcessEvent implements Listener {
         String[] args = event.getMessage().split(" ");
         if (args.length > 1) {
             Player targetPlayer = Bukkit.getServer().getPlayer(args[1]);
+            if (targetPlayer == null) {
+                return;
+            }
             if ((commands.contains(args[0])) && CommandToggle.togglePM
                     .contains(targetPlayer.getName())) {
                 if (player.hasPermission("deluxepm.admin")) {
