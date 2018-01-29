@@ -1,6 +1,5 @@
 package me.glaremasters.deluxepm.events;
 
-import java.util.List;
 import me.glaremasters.deluxepm.DeluxePM;
 import me.glaremasters.deluxepm.commands.CommandToggle;
 import me.glaremasters.deluxepm.util.ColorUtil;
@@ -9,6 +8,8 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerCommandPreprocessEvent;
+
+import java.util.List;
 
 /**
  * Created by GlareMasters on 1/28/2018.
@@ -25,6 +26,10 @@ public class CommandPreProcessEvent implements Listener {
             Player targetPlayer = Bukkit.getServer().getPlayer(args[1]);
             if ((commands.contains(args[0])) && CommandToggle.togglePM
                     .contains(targetPlayer.getName())) {
+                if (player.hasPermission("deluxepm.admin")) {
+                    event.setCancelled(false);
+                    return;
+                }
                 event.setCancelled(true);
                 player.sendMessage(ColorUtil
                         .color(DeluxePM.getI().getConfig().getString("messages.user-disabled")));
