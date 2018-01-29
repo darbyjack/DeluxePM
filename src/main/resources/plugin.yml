@@ -7,4 +7,5 @@ description: Toggle PMs!
 commands:
   deluxepm:
     description: Default help info
+    aliases: [dpm]
 
