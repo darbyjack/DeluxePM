@@ -1,5 +1,8 @@
 plugin-prefix: "&b[&7DeluxePM&b]"
 
+updater:
+  check: true
+
 messages:
   toggle: "/deluxepm toggle"
   enabled: "PMs have been turned on"
