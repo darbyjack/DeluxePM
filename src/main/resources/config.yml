@@ -5,6 +5,7 @@ updater:
 
 messages:
   toggle: "/deluxepm toggle"
+  reload: "/deluxepm reload"
   enabled: "PMs have been turned on"
   disabled: "PMs have been turned off"
   user-disabled: "This user has PMs turned off"

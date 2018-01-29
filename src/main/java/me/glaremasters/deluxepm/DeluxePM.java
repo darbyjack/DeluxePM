@@ -1,6 +1,7 @@
 package me.glaremasters.deluxepm;
 
 import me.glaremasters.deluxepm.commands.CommandHelp;
+import me.glaremasters.deluxepm.commands.CommandReload;
 import me.glaremasters.deluxepm.commands.CommandToggle;
 import me.glaremasters.deluxepm.commands.base.CommandHandler;
 import me.glaremasters.deluxepm.events.CommandPreProcessEvent;
@@ -40,7 +41,7 @@ public class DeluxePM extends JavaPlugin {
         getCommand("deluxepm").setExecutor(commandHandler);
 
         Stream.of(
-                new CommandHelp(), new CommandToggle()
+                new CommandHelp(), new CommandToggle(), new CommandReload()
         ).forEach(commandHandler::register);
 
         Stream.of(
