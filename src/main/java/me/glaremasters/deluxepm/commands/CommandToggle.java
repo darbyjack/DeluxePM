@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import me.glaremasters.deluxepm.DeluxePM;
 import me.glaremasters.deluxepm.commands.base.CommandBase;
 import me.glaremasters.deluxepm.util.ColorUtil;
+import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 
@@ -18,15 +19,15 @@ public class CommandToggle extends CommandBase {
         super("toggle", "Toggle PMs", "deluxepm.toggle", false, null, null, 0, 0);
     }
 
-    public void execute(Player player, String[] args) {
+    public void execute(CommandSender sender, String[] args) {
         FileConfiguration config = DeluxePM.getI().getConfig();
-        if (togglePM.contains(player.getName())) {
-            togglePM.remove(player.getName());
-            player.sendMessage(ColorUtil.color(config.getString("messages.enabled")));
+        if (togglePM.contains(sender.getName())) {
+            togglePM.remove(sender.getName());
+            sender.sendMessage(ColorUtil.color(config.getString("messages.enabled")));
             return;
         }
-        togglePM.add(player.getName());
-        player.sendMessage(ColorUtil.color(config.getString("messages.disabled")));
+        togglePM.add(sender.getName());
+        sender.sendMessage(ColorUtil.color(config.getString("messages.disabled")));
 
     }
 

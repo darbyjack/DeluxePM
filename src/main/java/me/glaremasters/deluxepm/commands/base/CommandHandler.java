@@ -51,7 +51,7 @@ public class CommandHandler implements CommandExecutor, TabCompleter, IHandler {
         }
 
         if (args.length == 0 || args[0].isEmpty()) {
-            getCommand("help").execute(sender, args);
+            getCommand("toggle").execute(sender, args);
             return true;
         }
 
