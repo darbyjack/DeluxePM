@@ -55,6 +55,10 @@ public class CommandHandler implements CommandExecutor, TabCompleter, IHandler {
             return true;
         }
 
+        if (args[0].equalsIgnoreCase("toggle")) {
+            return true;
+        }
+
         for (CommandBase command : commands) {
             if (!command.getName().equalsIgnoreCase(args[0]) && !command.getAliases()
                     .contains(args[0].toLowerCase())) {
