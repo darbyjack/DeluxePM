@@ -37,6 +37,8 @@ public class CommandPreProcessEvent implements Listener {
                             event.setCancelled(false);
                             return;
                         }
+                        DeluxeChat.removeFromPM(targetPlayer);
+                        DeluxeChat.removeFromPM(player.getName());
                         event.setCancelled(true);
                         player.sendMessage(ColorUtil.color(config.getString("messages.user-disabled")));
                     }
