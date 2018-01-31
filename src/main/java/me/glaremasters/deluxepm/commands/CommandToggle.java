@@ -1,6 +1,8 @@
 package me.glaremasters.deluxepm.commands;
 
 import java.util.ArrayList;
+
+import me.clip.deluxechat.DeluxeChat;
 import me.glaremasters.deluxepm.DeluxePM;
 import me.glaremasters.deluxepm.commands.base.CommandBase;
 import me.glaremasters.deluxepm.util.ColorUtil;
@@ -27,6 +29,9 @@ public class CommandToggle extends CommandBase {
             return;
         }
         togglePM.add(sender.getName());
+        if (config.getBoolean("hooks.deluxechat")) {
+            DeluxeChat.removeFromPM(sender.getName());
+        }
         sender.sendMessage(ColorUtil.color(config.getString("messages.disabled")));
 
     }

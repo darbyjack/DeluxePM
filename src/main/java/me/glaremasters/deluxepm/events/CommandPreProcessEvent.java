@@ -55,6 +55,10 @@ public class CommandPreProcessEvent implements Listener {
                     return;
                 }
                 event.setCancelled(true);
+                if (config.getBoolean("hooks.deluxechat")) {
+                    DeluxeChat.removeFromPM(player.getName());
+                    DeluxeChat.removeFromPM(targetPlayer.getName());
+                }
                 player.sendMessage(ColorUtil
                         .color(config.getString("messages.user-disabled")));
             }
