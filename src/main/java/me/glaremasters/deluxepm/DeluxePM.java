@@ -65,6 +65,12 @@ public class DeluxePM extends JavaPlugin {
             }
         }
 
+        if (getServer().getPluginManager().isPluginEnabled("DeluxeChat")) {
+            getLogger().warning("DeluxeChat has been detected! Make sure to enable it in the config!");
+        }
+
+
+
 
     }
 

@@ -2,6 +2,7 @@ name: DeluxePM
 version: @version@
 main: me.glaremasters.deluxepm.DeluxePM
 authors: [blockslayer22]
+softdepend: [DeluxeChat]
 description: Toggle PMs!
 
 commands:

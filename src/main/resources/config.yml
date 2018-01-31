@@ -12,6 +12,11 @@ plugin-prefix: "&b[&7DeluxePM&b]"
 updater:
   check: true
 
+# If you are using DeluxeChat, you MUST enable this to have /r be blocked due to the way DeluxeChat messaging works
+
+hooks:
+  deluxechat: false
+
 messages:
   toggle: "/dpm"
   reload: "/deluxepm reload"

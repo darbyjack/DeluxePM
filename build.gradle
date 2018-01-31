@@ -55,6 +55,7 @@ repositories {
 dependencies {
     provided 'org.spigotmc:spigot-api:1.12-R0.1-SNAPSHOT'
     provided 'net.milkbowl.vault:VaultAPI:1.6'
+    provided files ('libs/DeluxeChat.jar')
 }
 import org.apache.tools.ant.filters.ReplaceTokens
 
