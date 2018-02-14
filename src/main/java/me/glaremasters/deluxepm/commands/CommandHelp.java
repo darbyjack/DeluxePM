@@ -1,9 +1,8 @@
 package me.glaremasters.deluxepm.commands;
 
+import static me.glaremasters.deluxepm.util.ColorUtil.color;
 import me.glaremasters.deluxepm.DeluxePM;
 import me.glaremasters.deluxepm.commands.base.CommandBase;
-import me.glaremasters.deluxepm.util.ColorUtil;
-import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 
@@ -19,9 +18,9 @@ public class CommandHelp extends CommandBase {
     public void execute(Player player, String[] args) {
         FileConfiguration config = DeluxePM.getI().getConfig();
 
-        player.sendMessage(ColorUtil.color(config.getString("messages.toggle")));
-        player.sendMessage(ColorUtil.color(config.getString("messages.reload")));
-        player.sendMessage(ColorUtil.color(config.getString("messages.help")));
+        player.sendMessage(color(config.getString("messages.toggle")));
+        player.sendMessage(color(config.getString("messages.reload")));
+        player.sendMessage(color(config.getString("messages.help")));
     }
 
 }

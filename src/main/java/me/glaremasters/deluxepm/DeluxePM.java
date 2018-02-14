@@ -1,5 +1,6 @@
 package me.glaremasters.deluxepm;
 
+import java.util.stream.Stream;
 import me.glaremasters.deluxepm.commands.CommandHelp;
 import me.glaremasters.deluxepm.commands.CommandReload;
 import me.glaremasters.deluxepm.commands.CommandToggle;
@@ -10,8 +11,6 @@ import me.glaremasters.deluxepm.updater.SpigotUpdater;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
-
-import java.util.stream.Stream;
 
 /**
  * Created by GlareMasters on 1/28/2018.
@@ -53,11 +52,13 @@ public class DeluxePM extends JavaPlugin {
             try {
                 if (updater.checkForUpdates()) {
                     getLogger()
-                            .warning("You appear to be running a version other than our latest stable release."
-                                    + " You can download our newest version at: " + updater
-                                    .getResourceURL());
+                            .warning(
+                                    "You appear to be running a version other than our latest stable release."
+                                            + " You can download our newest version at: " + updater
+                                            .getResourceURL());
                 } else {
-                    getLogger().warning("You are currently the latest version of the plugin! - " + getDescription().getVersion());
+                    getLogger().warning("You are currently the latest version of the plugin! - "
+                            + getDescription().getVersion());
                 }
             } catch (Exception e) {
                 getLogger().info("Could not check for updates! Stacktrace:");
@@ -66,10 +67,9 @@ public class DeluxePM extends JavaPlugin {
         }
 
         if (getServer().getPluginManager().isPluginEnabled("DeluxeChat")) {
-            getLogger().warning("DeluxeChat has been detected! Make sure to enable it in the config!");
+            getLogger()
+                    .warning("DeluxeChat has been detected! Make sure to enable it in the config!");
         }
-
-
 
 
     }

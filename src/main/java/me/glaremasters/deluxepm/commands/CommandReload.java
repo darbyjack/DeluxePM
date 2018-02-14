@@ -1,8 +1,8 @@
 package me.glaremasters.deluxepm.commands;
 
+import static me.glaremasters.deluxepm.util.ColorUtil.color;
 import me.glaremasters.deluxepm.DeluxePM;
 import me.glaremasters.deluxepm.commands.base.CommandBase;
-import me.glaremasters.deluxepm.util.ColorUtil;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -19,10 +19,11 @@ public class CommandReload extends CommandBase {
         FileConfiguration config = DeluxePM.getI().getConfig();
         DeluxePM.getI().reloadConfig();
 
-        DeluxePM.prefix = ChatColor.translateAlternateColorCodes('&', DeluxePM.getI().getConfig().getString("plugin-prefix"))
+        DeluxePM.prefix = ChatColor.translateAlternateColorCodes('&',
+                DeluxePM.getI().getConfig().getString("plugin-prefix"))
                 + ChatColor.RESET + " ";
 
-        sender.sendMessage(ColorUtil.color(config.getString("messages.reload-success")));
+        sender.sendMessage(color(config.getString("messages.reload-success")));
 
     }
 }
